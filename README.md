@@ -6,14 +6,6 @@ This project is built as part of a backend assessment to demonstrate API design,
 
 ---
 
-## 🔗 Live URLs
-
-- **Backend API**: https://<your-backend-url>
-- **Frontend**: https://<your-frontend-url>
-- **Resume**: https://<your-resume-link>
-
----
-
 ## 🧱 Architecture
 ```bash
 Frontend (HTML) |  HTTP (CORS enabled) | Backend (Node.js + Express) | SQLite Database
