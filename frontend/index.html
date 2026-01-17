@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Me API Playground</title>
+</head>
+<body>
+  <h1>My Profile</h1>
+  <pre id="profile"></pre>
+
+  <h2>Search Projects</h2>
+  <input id="q" />
+  <button onclick="search()">Search</button>
+  <pre id="results"></pre>
+
+  <script>
+    fetch("http://localhost:3000/profile")
+      .then(r => r.json())
+      .then(d => profile.innerText = JSON.stringify(d, null, 2));
+
+    function search() {
+      fetch(`http://localhost:3000/search?q=${q.value}`)
+        .then(r => r.json())
+        .then(d => results.innerText = JSON.stringify(d, null, 2));
+    }
+  </script>
+</body>
+</html>
